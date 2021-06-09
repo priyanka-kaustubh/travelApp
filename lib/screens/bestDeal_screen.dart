@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 
+
 class BestDealPage extends StatefulWidget {
   @override
   _BestDealPageState createState() => _BestDealPageState();
@@ -11,7 +12,88 @@ class _BestDealPageState extends State<BestDealPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Color(0xfff1b3065),
+        leading: Icon(
+          Icons.arrow_back_ios,
+          size: 18.0,
+        ),
+        title: Text(
+            "London",
+        ),
+        actions: [
+          Icon(
+              Icons.favorite,
+            size: 18.0,
+          ),
+          SizedBox(
+            width: 15.0,
+          ),
+          Icon(
+              Icons.more_vert,
+            size: 18.0,
+          ),
+          SizedBox(
+            width: 12.0,
+          ),
+
+        ],
+        flexibleSpace: Container(
+          margin: EdgeInsets.only(top: 65.0, left: 70.0),
+          child: Text(
+            "England",
+                style: TextStyle(
+              fontSize: 12.0,
+                  fontWeight: FontWeight.w600,
+                  color: Colors.white
+          ),
+          ),
+        ),
+
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(40.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                height: 20,
+                width: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  color: Color(0xfff346dfa)
+                ),
+
+                margin: EdgeInsets.only(left: 70.0, bottom: 10.0),
+                padding: EdgeInsets.all(4.0),
+                child: Text(
+
+                    "\$330",
+                  style: TextStyle(
+                    fontSize: 10.0,
+                    color: Colors.white
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+
+              Container(
+                margin: EdgeInsets.only(left: 130.0,),
+                padding: EdgeInsets.only(bottom: 10.0),
+                child: Text(
+
+                  "Expires in: 58h 23min",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 10.0
+                  ),
+                  textAlign: TextAlign.center,
+                ),
+              )
+            ],
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.all(15.0),
